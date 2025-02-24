@@ -8,12 +8,17 @@
     "storage",
     "scripting"
   ],
+  "host_permissions": [
+    "https://*.suumo.jp/*",
+    "https://*.homes.co.jp/*",
+    "https://*.at-home.co.jp/*"
+  ],
   "background": {
     "service_worker": "background.js"
   },
   "content_scripts": [
     {
-      "matches": ["https://*/*", "http://*/*"],
+      "matches": ["https://*.suumo.jp/*", "https://*.homes.co.jp/*", "https://*.at-home.co.jp/*"],
       "js": ["content.js"]
     }
   ],
